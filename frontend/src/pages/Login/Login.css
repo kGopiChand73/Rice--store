@@ -1,0 +1,450 @@
+/* ===================================
+   Global reset
+   =================================== */
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* ===================================
+   Page wrapper — soft gradient +
+   decorative blobs, matching the rest
+   of the site instead of flat white
+   =================================== */
+
+.login-page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  padding: 60px 24px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #ffffff 0%, #f2f9f3 45%, #eefcf0 100%);
+}
+
+.login-page::before {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(46, 125, 50, 0.08) 0%, rgba(46, 125, 50, 0) 70%);
+  border-radius: 50%;
+  top: -220px;
+  right: -180px;
+  pointer-events: none;
+}
+
+.login-page::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255, 193, 7, 0.1) 0%, rgba(255, 193, 7, 0) 70%);
+  border-radius: 50%;
+  bottom: -160px;
+  left: -120px;
+  pointer-events: none;
+}
+
+.login-wrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* ===================================
+   Outer card — Categories-style
+   container sizing, rice-field photo
+   as its background
+   =================================== */
+
+.login-image-card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  border-radius: 28px;
+  border: 1px solid #e5f3e6;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+
+  background-image: url("../../assets/images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  animation: kenBurns 20s ease-in-out infinite alternate;
+}
+
+/* Wash applied only to the left ~65% of the card so the rice bag
+   on the right stays clearly visible and untouched */
+.login-image-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(11, 61, 46, 0.55) 0%,
+    rgba(11, 61, 46, 0.4) 35%,
+    rgba(11, 61, 46, 0.1) 62%,
+    rgba(11, 61, 46, 0) 75%
+  );
+  z-index: 0;
+}
+
+@keyframes kenBurns {
+  0% {
+    background-size: 100% auto;
+    background-position: center;
+  }
+  100% {
+    background-size: 115% auto;
+    background-position: center;
+  }
+}
+
+/* ===================================
+   Inner glass card — pushed toward
+   the left side, leaving the bag on
+   the right clear
+   =================================== */
+
+.auth-card {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  max-width: 720px;
+  margin: 48px 0 48px 48px;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+
+  animation: cardPopIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.auth-card::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(129, 199, 132, 0.3) 0%, rgba(129, 199, 132, 0) 70%);
+  border-radius: 50%;
+  top: -120px;
+  right: -90px;
+  pointer-events: none;
+}
+
+.auth-card::after {
+  content: "";
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  background: radial-gradient(circle, rgba(255, 193, 7, 0.24) 0%, rgba(255, 193, 7, 0) 70%);
+  border-radius: 50%;
+  bottom: -75px;
+  left: -65px;
+  pointer-events: none;
+}
+
+.auth-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes cardPopIn {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ===================================
+   Intro half
+   =================================== */
+
+.auth-intro,
+.auth-form {
+  flex: 1;
+  padding: 44px 40px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-intro {
+  background: rgba(27, 94, 32, 0.3);
+}
+
+.auth-intro h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.auth-intro h2 {
+  margin: 10px 0 22px;
+  font-weight: 500;
+  opacity: 0.95;
+  font-size: 15.5px;
+  color: #eafbe8;
+  line-height: 1.5;
+}
+
+.auth-intro ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.auth-intro li {
+  margin: 12px 0;
+  font-size: 14.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth-divider {
+  width: 1px;
+  align-self: stretch;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ===================================
+   Form half
+   =================================== */
+
+.auth-form h2 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 22px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.auth-form label {
+  color: #fff;
+  font-size: 13.5px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.auth-form input {
+  background: rgba(255, 255, 255, 0.94) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  padding: 10px 14px !important;
+  font-size: 14px !important;
+  border-radius: 10px !important;
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box span {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  color: #556b57;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.password-box span:hover {
+  color: #198754;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.auth-form button {
+  min-height: 46px;
+  font-size: 15px;
+  border-radius: 10px;
+  margin-top: 6px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(46, 125, 50, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(46, 125, 50, 0.4);
+}
+
+.auth-form a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+.auth-form a:hover {
+  color: #a8e6b0;
+}
+
+/* ===================================
+   Tablet
+   =================================== */
+
+@media (max-width: 991px) {
+  .login-page {
+    padding: 40px 20px;
+  }
+
+  .login-image-card {
+    min-height: 560px;
+  }
+
+  .auth-card {
+    max-width: 560px;
+    margin: 32px;
+  }
+
+  .auth-intro,
+  .auth-form {
+    padding: 32px 28px;
+  }
+}
+
+/* ===================================
+   Mobile — stack, image card no
+   longer needs the left-align trick
+   since there's no room for the bag
+   to peek through anyway
+   =================================== */
+
+@media (max-width: 720px) {
+  .login-page {
+    padding: 20px 14px;
+  }
+
+  .login-image-card {
+    min-height: auto;
+    border-radius: 20px;
+    padding: 20px 12px;
+    justify-content: center;
+  }
+
+  .login-image-card::before {
+    background: linear-gradient(180deg, rgba(11, 61, 46, 0.55) 0%, rgba(11, 61, 46, 0.45) 100%);
+  }
+
+  .auth-card {
+    flex-direction: column;
+    max-width: 420px;
+    width: 100%;
+    margin: 0;
+    border-radius: 18px;
+  }
+
+  .auth-card::before {
+    width: 170px;
+    height: 170px;
+    top: -85px;
+    right: -65px;
+  }
+
+  .auth-card::after {
+    width: 130px;
+    height: 130px;
+    bottom: -55px;
+    left: -45px;
+  }
+
+  .auth-divider {
+    width: auto;
+    height: 1px;
+    align-self: auto;
+  }
+
+  .auth-intro,
+  .auth-form {
+    padding: 28px 24px;
+  }
+
+  .auth-intro {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .auth-intro h1 {
+    font-size: 23px;
+    margin-bottom: 6px;
+  }
+
+  .auth-intro h2 {
+    font-size: 13px;
+    margin: 6px 0 14px;
+  }
+
+  .auth-intro ul {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .auth-intro li {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+
+  .auth-form h2 {
+    font-size: 19px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .auth-form button {
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 380px) {
+  .login-page {
+    padding: 14px 10px;
+  }
+
+  .login-image-card {
+    padding: 14px 8px;
+  }
+
+  .auth-intro,
+  .auth-form {
+    padding: 22px 18px;
+  }
+
+  .auth-intro h1 {
+    font-size: 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-image-card {
+    animation: none;
+  }
+
+  .auth-card {
+    animation: none;
+  }
+}

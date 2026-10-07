@@ -1,0 +1,213 @@
+/* ===========================
+   Products Page
+=========================== */
+
+.products-page{
+
+    padding-top:30px;
+
+    padding-bottom:50px;
+
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+.products-header{
+
+    margin-bottom:35px;
+
+}
+
+.products-header h2{
+
+    font-size:38px;
+
+    font-weight:800;
+
+    color:#2E7D32;
+
+    margin-bottom:10px;
+
+}
+
+.products-header p{
+
+    color:#666;
+
+    font-size:17px;
+
+    margin:0;
+
+}
+
+/* ===========================
+   Filter Card
+=========================== */
+
+.products-page .col-lg-3{
+
+    position:sticky;
+
+    top:90px;
+
+    align-self:flex-start;
+
+}
+
+/* ===========================
+   Product Grid
+=========================== */
+
+.products-page .row{
+
+    --bs-gutter-x:1.3rem;
+
+    --bs-gutter-y:1.3rem;
+
+}
+
+/* ===========================
+   Spinner
+=========================== */
+
+.spinner-border{
+
+    width:3rem;
+
+    height:3rem;
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:991px){
+
+.products-header{
+
+text-align:center;
+
+}
+
+.products-header h2{
+
+font-size:32px;
+
+}
+
+.products-header p{
+
+font-size:15px;
+
+}
+
+.products-page .col-lg-3{
+
+position:static;
+
+margin-bottom:20px;
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.products-page{
+
+padding-top:20px;
+
+padding-bottom:30px;
+
+}
+
+.products-header{
+
+margin-bottom:25px;
+
+}
+
+.products-header h2{
+
+font-size:28px;
+
+}
+
+.products-header p{
+
+font-size:14px;
+
+}
+
+.products-page .row{
+
+--bs-gutter-x:.8rem;
+
+--bs-gutter-y:.9rem;
+
+}
+
+}
+
+/* Small Mobile */
+
+@media(max-width:576px){
+
+.products-header h2{
+
+font-size:24px;
+
+}
+
+.products-header p{
+
+font-size:13px;
+
+}
+
+.products-page{
+
+padding-left:12px;
+
+padding-right:12px;
+
+}
+
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+.products-page{
+
+animation:fadeProducts .6s ease;
+
+}
+
+@keyframes fadeProducts{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}

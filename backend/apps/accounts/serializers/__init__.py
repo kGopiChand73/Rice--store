@@ -1,0 +1,3 @@
+from .auth_serializer import RegisterSerializer
+from .profile_serializer import UserProfileSerializer
+from .address_serializer import CustomerAddressSerializer

@@ -1,0 +1,57 @@
+.notification-dropdown{
+
+    position:absolute;
+    
+    top:60px;
+    
+    right:0;
+    
+    width:360px;
+    
+    background:white;
+    
+    border-radius:15px;
+    
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    
+    padding:20px;
+    
+    max-height:500px;
+    
+    overflow:auto;
+    
+    z-index:999;
+    
+    }
+    
+    .notification-item{
+    
+    display:flex;
+    
+    gap:15px;
+    
+    padding:15px;
+    
+    border-bottom:1px solid #eee;
+    
+    }
+    
+    .notification-item.unread{
+    
+    background:#F1FFF3;
+    
+    border-left:4px solid #2E7D32;
+    
+    }
+    
+    .notification-item h6{
+    
+    margin-bottom:5px;
+    
+    }
+    
+    .notification-item small{
+    
+    color:#777;
+    
+    }

@@ -1,0 +1,103 @@
+.register-page{
+
+    display:flex;
+    
+    min-height:100vh;
+    
+    }
+    
+    .register-left{
+    
+    flex:1;
+    
+    background:linear-gradient(135deg,#2E7D32,#43A047);
+    
+    color:white;
+    
+    display:flex;
+    
+    justify-content:center;
+    
+    align-items:center;
+    
+    flex-direction:column;
+    
+    padding:60px;
+    
+    }
+    
+    .register-left h1{
+    
+    font-size:52px;
+    
+    font-weight:700;
+    
+    }
+    
+    .register-left h2{
+    
+    margin:20px 0;
+    
+    }
+    
+    .register-left p{
+    
+    max-width:420px;
+    
+    text-align:center;
+    
+    font-size:18px;
+    
+    }
+    
+    .register-right{
+    
+    flex:1;
+    
+    display:flex;
+    
+    justify-content:center;
+    
+    align-items:center;
+    
+    background:#F8FAF8;
+    
+    padding:40px;
+    
+    }
+    
+    .password-box{
+    
+    position:relative;
+    
+    }
+    
+    .password-box span{
+    
+    position:absolute;
+    
+    top:50%;
+    
+    right:15px;
+    
+    cursor:pointer;
+    
+    transform:translateY(-50%);
+    
+    }
+    
+    @media(max-width:992px){
+    
+    .register-left{
+    
+    display:none;
+    
+    }
+    
+    .register-right{
+    
+    flex:1;
+    
+    }
+    
+    }

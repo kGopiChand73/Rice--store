@@ -1,0 +1,75 @@
+.checkout-page{
+
+    background:#F5F7FA;
+    
+    min-height:100vh;
+    
+    padding:50px 0;
+    
+    }
+    
+    .checkout-title{
+    
+    font-weight:700;
+    
+    margin-bottom:30px;
+    
+    color:#2E7D32;
+    
+    }
+    
+    .checkout-card{
+    
+    background:white;
+    
+    padding:30px;
+    
+    border-radius:20px;
+    
+    box-shadow:0 8px 30px rgba(0,0,0,.05);
+    
+    }
+    
+    .empty-address{
+    
+    text-align:center;
+    
+    padding:50px 20px;
+    
+    border:2px dashed #ddd;
+    
+    border-radius:15px;
+    
+    background:#fafafa;
+    
+    }
+    
+    .empty-address h5{
+    
+    margin-bottom:10px;
+    
+    color:#555;
+    
+    }
+    
+    .empty-address p{
+    
+    color:#888;
+    
+    }
+    
+    @media(max-width:992px){
+    
+    .checkout-page{
+    
+    padding:25px 0;
+    
+    }
+    
+    .checkout-card{
+    
+    padding:20px;
+    
+    }
+    
+    }

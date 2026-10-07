@@ -1,0 +1,35 @@
+.loader-wrapper{
+
+    display:flex;
+    
+    justify-content:center;
+    
+    padding:50px;
+    
+    }
+    
+    .loader{
+    
+    width:50px;
+    
+    height:50px;
+    
+    border:5px solid #ddd;
+    
+    border-top:5px solid #2E7D32;
+    
+    border-radius:50%;
+    
+    animation:spin .8s linear infinite;
+    
+    }
+    
+    @keyframes spin{
+    
+    100%{
+    
+    transform:rotate(360deg);
+    
+    }
+    
+    }

@@ -1,0 +1,39 @@
+.summary-card{
+
+    background:white;
+    
+    padding:25px;
+    
+    border-radius:18px;
+    
+    box-shadow:0 6px 20px rgba(0,0,0,.05);
+    
+    position:sticky;
+    
+    top:100px;
+    
+    }
+    
+    .summary-item{
+    
+    display:flex;
+    
+    justify-content:space-between;
+    
+    margin-bottom:12px;
+    
+    }
+    
+    .payment-box{
+    
+    background:#F3FFF5;
+    
+    padding:15px;
+    
+    border-radius:12px;
+    
+    margin:20px 0;
+    
+    text-align:center;
+    
+    }

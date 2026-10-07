@@ -1,0 +1,114 @@
+/* ============================================================
+   Khadri Rice Store — Profile Page
+   Design tokens (kept on :root so every component file below
+   can reference the same palette/type scale via var(--...)).
+   Palette is drawn from the store's own world: husked rice
+   (warm gold), paddy leaf (deep green) and milled rice cream.
+   ============================================================ */
+
+   @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+
+   :root{
+       /* surfaces */
+       --kr-bg:#FBF6EC;
+       --kr-surface:#FFFFFF;
+       --kr-surface-tint:#FAF3E4;
+   
+       /* brand */
+       --kr-green-900:#16321F;
+       --kr-green-700:#2F6B3D;
+       --kr-green-500:#3F8A4C;
+       --kr-green-100:#E4EEDD;
+   
+       --kr-gold-700:#A9782B;
+       --kr-gold-500:#C79A3C;
+       --kr-gold-200:#F3E4BE;
+   
+       --kr-clay-600:#9C6B45;
+   
+       /* text */
+       --kr-ink:#2A2620;
+       --kr-ink-soft:#736A5A;
+       --kr-ink-faint:#A79D8A;
+   
+       /* lines / shadow */
+       --kr-line:#EAE1CB;
+       --kr-shadow:0 10px 30px rgba(43,36,20,0.07);
+       --kr-shadow-sm:0 2px 8px rgba(43,36,20,0.06);
+   
+       /* type */
+       --kr-display:'Fraunces', serif;
+       --kr-body:'Inter', system-ui, sans-serif;
+   
+       --kr-radius-lg:20px;
+       --kr-radius-md:14px;
+       --kr-radius-sm:10px;
+   }
+   
+   .profile-page{
+       background:#F5F7FA;
+       min-height:100vh;
+       padding:48px 0 72px;
+       font-family:var(--kr-body);
+       color:var(--kr-ink);
+   }
+   
+   .profile-page .container{
+       max-width:1080px;
+   }
+   
+   .profile-page > .container > h2{
+       font-family:var(--kr-display);
+       font-weight:600;
+       font-size:2rem;
+       letter-spacing:-0.01em;
+       color:var(--kr-green-900);
+       margin-bottom:6px;
+   }
+   
+   .profile-page .page-kicker{
+       display:inline-flex;
+       align-items:center;
+       gap:8px;
+       font-size:11px;
+       font-weight:600;
+       letter-spacing:0.14em;
+       text-transform:uppercase;
+       color:var(--kr-gold-700);
+       margin-bottom:6px;
+   }
+   
+   .profile-page .page-kicker::before{
+       content:"";
+       width:16px;
+       height:2px;
+       background:var(--kr-gold-500);
+       border-radius:2px;
+   }
+   
+   .profile-page .row{
+       margin-top:28px;
+       row-gap:24px;
+   }
+   
+   .profile-page .section-block{
+       margin-top:40px;
+   }
+   
+   /* shared eyebrow label used across cards */
+   .kr-eyebrow{
+       font-size:11px;
+       font-weight:600;
+       letter-spacing:0.12em;
+       text-transform:uppercase;
+       color:var(--kr-ink-faint);
+   }
+   
+   /* loading state */
+   .profile-page .spinner-border.text-success{
+       color:var(--kr-green-700) !important;
+   }
+   
+   @media (max-width:991px){
+       .profile-page{padding:32px 0 56px;}
+   }

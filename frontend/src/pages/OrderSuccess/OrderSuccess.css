@@ -1,0 +1,13 @@
+.success-page{
+
+    background:#F5F7FA;
+    
+    min-height:100vh;
+    
+    display:flex;
+    
+    align-items:center;
+    
+    padding:50px 0;
+    
+    }

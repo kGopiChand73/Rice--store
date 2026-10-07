@@ -1,0 +1,89 @@
+.skeleton-card{
+
+    background:white;
+    
+    padding:18px;
+    
+    border-radius:18px;
+    
+    }
+    
+    .skeleton-img{
+    
+    height:180px;
+    
+    background:#e5e5e5;
+    
+    border-radius:12px;
+    
+    animation:pulse 1.5s infinite;
+    
+    }
+    
+    .skeleton-title{
+    
+    height:18px;
+    
+    width:80%;
+    
+    background:#e5e5e5;
+    
+    margin-top:15px;
+    
+    border-radius:6px;
+    
+    animation:pulse 1.5s infinite;
+    
+    }
+    
+    .skeleton-price{
+    
+    height:18px;
+    
+    width:40%;
+    
+    background:#e5e5e5;
+    
+    margin-top:12px;
+    
+    border-radius:6px;
+    
+    animation:pulse 1.5s infinite;
+    
+    }
+    
+    .skeleton-btn{
+    
+    height:40px;
+    
+    background:#e5e5e5;
+    
+    margin-top:20px;
+    
+    border-radius:10px;
+    
+    animation:pulse 1.5s infinite;
+    
+    }
+    
+    @keyframes pulse{
+    
+    0%{
+    
+    opacity:.6;
+    
+    }
+    
+    50%{
+    
+    opacity:1;
+    
+    }
+    
+    100%{
+    
+    opacity:.6;
+    
+    }
+    
+    }

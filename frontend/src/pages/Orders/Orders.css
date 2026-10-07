@@ -1,0 +1,33 @@
+.orders-page{
+
+    padding:50px 0;
+    
+    background:#F5F7FA;
+    
+    min-height:100vh;
+    
+    }
+    
+    .page-title{
+    
+    font-weight:700;
+    
+    color:#2E7D32;
+    
+    margin-bottom:35px;
+    
+    }
+    
+    .empty-orders{
+    
+    background:white;
+    
+    padding:60px;
+    
+    text-align:center;
+    
+    border-radius:20px;
+    
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+    
+    }

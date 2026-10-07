@@ -1,0 +1,147 @@
+/* =====================================
+   HOME WRAPPER
+===================================== */
+
+:root {
+    --overlay-light: rgba(255, 255, 255, 0.25);
+    --overlay-dark: rgba(0, 0, 0, 0.15);
+    --section-gap-desktop: 70px;
+    --section-gap-tablet: 55px;
+    --section-gap-mobile: 40px;
+    --section-gap-sm: 28px;
+    --section-gap-xs: 22px;
+    --transition-base: 0.3s ease;
+}
+
+..home-bg-wrapper::before {
+    display: none;
+}
+/* Gradient overlay reads more premium than a flat wash —
+   darker at edges for text legibility, lighter center to show the image */
+.home-bg-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        var(--overlay-dark) 0%,
+        var(--overlay-light) 35%,
+        var(--overlay-light) 65%,
+        var(--overlay-dark) 100%
+    );
+    z-index: 0;
+    pointer-events: none;
+}
+
+.home-bg-wrapper > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* =====================================
+   Sections
+===================================== */
+
+.home-bg-wrapper section {
+    padding: var(--section-gap-desktop) 0;
+}
+
+/* =====================================
+   Animation
+===================================== */
+
+.home-bg-wrapper > * {
+    animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Stagger direct children slightly for a polished cascading entrance */
+.home-bg-wrapper > *:nth-child(1) { animation-delay: 0s; }
+.home-bg-wrapper > *:nth-child(2) { animation-delay: 0.08s; }
+.home-bg-wrapper > *:nth-child(3) { animation-delay: 0.16s; }
+.home-bg-wrapper > *:nth-child(4) { animation-delay: 0.24s; }
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Respect users who prefer less motion — accessibility + polish */
+@media (prefers-reduced-motion: reduce) {
+    .home-bg-wrapper > * {
+        animation: none;
+    }
+}
+
+/* =====================================
+   Tablet (≤992px)
+===================================== */
+
+@media (max-width: 992px) {
+    .home-bg-wrapper {
+        background-attachment: scroll; /* fixed is buggy/heavy on touch devices */
+    }
+
+    .home-bg-wrapper section {
+        padding: var(--section-gap-tablet) 0;
+    }
+}
+
+/* =====================================
+   Mobile (≤768px)
+===================================== */
+
+@media (max-width: 768px) {
+    .home-bg-wrapper {
+        background-size: cover;
+        background-position: center;
+        padding: 0;
+        /* respect notches/home-indicator on modern phones */
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+
+    .home-bg-wrapper::before {
+        background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.25) 0%,
+            rgba(255, 255, 255, 0.45) 40%,
+            rgba(255, 255, 255, 0.45) 60%,
+            rgba(0, 0, 0, 0.25) 100%
+        );
+    }
+
+    .home-bg-wrapper section {
+        padding: var(--section-gap-mobile) 0;
+    }
+}
+
+/* =====================================
+   Small Mobile (≤576px)
+===================================== */
+
+@media (max-width: 576px) {
+    .home-bg-wrapper {
+        background-size: cover;
+        background-position: center top;
+    }
+
+    .home-bg-wrapper section {
+        padding: var(--section-gap-sm) 0;
+    }
+}
+
+/* =====================================
+   Extra Small Phones (≤420px)
+===================================== */
+
+@media (max-width: 420px) {
+    .home-bg-wrapper section {
+        padding: var(--section-gap-xs) 0;
+    }
+}

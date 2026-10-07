@@ -1,0 +1,162 @@
+.invoice{
+
+    background:white;
+    
+    padding:40px;
+    
+    font-family:Arial,sans-serif;
+    
+    color:#222;
+    
+    }
+    
+    .invoice-header{
+    
+    display:flex;
+    
+    justify-content:space-between;
+    
+    align-items:flex-start;
+    
+    margin-bottom:25px;
+    
+    }
+    
+    .invoice-header h1{
+    
+    color:#2E7D32;
+    
+    font-weight:bold;
+    
+    }
+    
+    .invoice-grid{
+    
+    display:grid;
+    
+    grid-template-columns:1fr 1fr;
+    
+    gap:40px;
+    
+    margin:30px 0;
+    
+    }
+    
+    .invoice-table{
+    
+    margin-top:20px;
+    
+    }
+    
+    .invoice-summary{
+    
+    display:flex;
+    
+    justify-content:flex-end;
+    
+    margin-top:30px;
+    
+    }
+    
+    .invoice-summary table{
+    
+    width:320px;
+    
+    }
+    
+    .invoice-summary td{
+    
+    padding:8px;
+    
+    }
+    
+    .grand-total{
+    
+    font-weight:bold;
+    
+    font-size:20px;
+    
+    border-top:2px solid #000;
+    
+    }
+    
+    .payment-box{
+    
+    margin-top:35px;
+    
+    padding:20px;
+    
+    background:#F5FFF5;
+    
+    border-left:5px solid #2E7D32;
+    
+    }
+    
+    .invoice-footer{
+    
+    text-align:center;
+    
+    margin-top:50px;
+    
+    font-size:18px;
+    
+    font-weight:bold;
+    
+    color:#2E7D32;
+    
+    }
+    
+    @media print{
+    
+    body{
+    
+    background:white;
+    
+    }
+    
+    button,
+    
+    .no-print{
+    
+    display:none !important;
+    
+    }
+    
+    .invoice{
+    
+    padding:0;
+    
+    }
+    
+    }
+    .print-area{
+
+        display:none;
+        
+        }
+        
+        @media print{
+        
+        .modal-backdrop,
+        
+        .modal-actions,
+        
+        .modal-header,
+        
+        .address-card,
+        
+        .table,
+        
+        .order-total{
+        
+        display:none !important;
+        
+        }
+        
+        .print-area{
+        
+        display:block;
+        
+        }
+        
+        }

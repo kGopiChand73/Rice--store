@@ -1,0 +1,214 @@
+.profile-card{
+    background:var(--kr-surface);
+    border-radius:var(--kr-radius-lg);
+    border:1px solid var(--kr-line);
+    box-shadow:var(--kr-shadow);
+    padding:40px 32px 32px;
+    text-align:center;
+    height:100%;
+    position:relative;
+    overflow:hidden;
+}
+
+.profile-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:88px;
+    background:linear-gradient(180deg, var(--kr-green-100) 0%, transparent 100%);
+    opacity:.6;
+}
+
+.profile-avatar-wrap{
+    position:relative;
+    width:120px;
+    height:120px;
+    margin:0 auto 18px;
+}
+
+.grain-ring{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+}
+
+.grain-ring .grain{
+    fill:var(--kr-gold-500);
+    opacity:0.85;
+}
+
+.grain-ring .grain-alt{
+    fill:var(--kr-green-500);
+    opacity:0.85;
+}
+
+.profile-avatar{
+    position:absolute;
+    inset:16px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(150deg, var(--kr-green-700), var(--kr-green-900));
+    color:#fff;
+    font-family:var(--kr-display);
+    font-weight:600;
+    font-size:2rem;
+    letter-spacing:0.02em;
+    box-shadow:inset 0 0 0 4px rgba(255,255,255,0.12);
+}
+
+.profile-name{
+    position:relative;
+    font-family:var(--kr-display);
+    font-weight:600;
+    font-size:1.5rem;
+    color:var(--kr-ink);
+    margin-bottom:10px;
+}
+
+.customer-tag{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:var(--kr-gold-200);
+    color:var(--kr-gold-700);
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.03em;
+    padding:5px 14px;
+    border-radius:999px;
+    margin-bottom:14px;
+}
+
+.profile-email{
+    position:relative;
+    color:var(--kr-ink-soft);
+    font-size:14px;
+    margin-bottom:0;
+}
+
+.profile-card hr{
+    position:relative;
+    border:none;
+    border-top:1px solid var(--kr-line);
+    margin:24px 0 20px;
+}
+
+.info-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    text-align:left;
+    padding:11px 4px;
+    border-bottom:1px dashed var(--kr-line);
+}
+
+.info-row:last-of-type{
+    border-bottom:none;
+}
+
+.info-value{
+    font-size:14px;
+    font-weight:500;
+    color:var(--kr-ink);
+}
+
+.btn-edit-profile{
+    margin-top:26px;
+    width:100%;
+    max-width:220px;
+    padding:11px 20px;
+    border:none;
+    border-radius:999px;
+    background:var(--kr-green-700);
+    color:#fff;
+    font-weight:600;
+    font-size:14px;
+    letter-spacing:0.01em;
+    cursor:pointer;
+    transition:background .18s ease, transform .18s ease;
+}
+
+.btn-edit-profile:hover{
+    background:var(--kr-green-900);
+    transform:translateY(-1px);
+}
+
+/* ---- edit mode ---- */
+
+.profile-card--edit{
+    text-align:left;
+    padding:32px;
+}
+
+.edit-title{
+    font-family:var(--kr-display);
+    font-weight:600;
+    font-size:1.4rem;
+    color:var(--kr-green-900);
+    margin-bottom:4px;
+}
+
+.edit-subtitle{
+    color:var(--kr-ink-soft);
+    font-size:13px;
+    margin-bottom:22px;
+}
+
+.profile-card--edit form label{
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--kr-ink-faint);
+}
+
+.profile-card--edit form input{
+    border:1px solid var(--kr-line);
+    border-radius:var(--kr-radius-sm);
+    padding:10px 14px;
+    font-size:14px;
+    margin-bottom:16px;
+    width:100%;
+    transition:border-color .15s ease, box-shadow .15s ease;
+}
+
+.profile-card--edit form input:focus{
+    outline:none;
+    border-color:var(--kr-green-500);
+    box-shadow:0 0 0 3px var(--kr-green-100);
+}
+
+.profile-card--edit form button[type="submit"]{
+    background:var(--kr-green-700);
+    border:none;
+    color:#fff;
+    font-weight:600;
+    padding:11px 22px;
+    border-radius:999px;
+    cursor:pointer;
+}
+
+.profile-card--edit form button[type="submit"]:hover{
+    background:var(--kr-green-900);
+}
+
+.btn-cancel-edit{
+    margin-left:12px;
+    background:none;
+    border:none;
+    color:var(--kr-ink-soft);
+    font-size:14px;
+    font-weight:500;
+    cursor:pointer;
+    text-decoration:underline;
+}
+
+@media (max-width:576px){
+    .profile-card{padding:32px 20px 28px;}
+}

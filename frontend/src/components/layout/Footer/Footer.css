@@ -1,0 +1,384 @@
+/*==================================================
+FOOTER
+==================================================*/
+
+.footer {
+    position: relative;
+    background: linear-gradient(135deg, #0b3d2e, #14532d, #1b5e20);
+    color: #fff;
+    padding: 90px 0 25px;
+    margin-top: 90px;
+    overflow: hidden;
+}
+
+/* Decorative Circles */
+
+.footer::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    top: -150px;
+    right: -120px;
+}
+
+.footer::after {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    bottom: -120px;
+    left: -100px;
+}
+
+.footer .container {
+    position: relative;
+    z-index: 2;
+}
+
+/*==================================================
+LOGO
+==================================================*/
+
+.footer-logo {
+    color: #ffc107;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.footer-description {
+    color: #d7d7d7;
+    line-height: 1.9;
+    font-size: 15px;
+    margin-bottom: 28px;
+}
+
+/*==================================================
+TRUST BADGES
+==================================================*/
+
+.trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.trust-badges span {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 9px 16px;
+    border-radius: 40px;
+    font-size: 13px;
+    transition: transform 0.35s ease, background 0.35s ease, color 0.35s ease;
+}
+
+.trust-badges span:hover {
+    background: #ffc107;
+    color: #222;
+    transform: translateY(-3px);
+}
+
+/*==================================================
+HEADINGS
+==================================================*/
+
+.footer h5 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.footer h5::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: #ffc107;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+/*==================================================
+LINKS
+==================================================*/
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+    color: #d8d8d8;
+    font-size: 15px;
+}
+
+.footer-links a {
+    color: #d8d8d8;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffc107;
+    padding-left: 8px;
+}
+
+.footer-email {
+    word-break: break-word;
+}
+
+/*==================================================
+SOCIAL — horizontal icon row
+==================================================*/
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.35s ease, transform 0.35s ease;
+}
+
+.social-links i {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    transition: background 0.35s ease, color 0.35s ease;
+}
+
+.social-links a:hover {
+    color: #ffc107;
+}
+
+.social-links a:hover i {
+    background: #ffc107;
+    color: #222;
+}
+
+.social-label {
+    font-size: 14px;
+}
+
+/*==================================================
+DIVIDER
+==================================================*/
+
+.footer hr {
+    margin: 45px 0 22px;
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+/*==================================================
+BOTTOM
+==================================================*/
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: #cfcfcf;
+    font-size: 14px;
+}
+
+.footer-bottom strong {
+    color: #ffc107;
+}
+
+/*==================================================
+TABLET
+==================================================*/
+
+@media (max-width: 991px) {
+    .footer {
+        padding: 70px 0 20px;
+    }
+
+    .footer-logo {
+        font-size: 28px;
+    }
+
+    .footer h5 {
+        font-size: 18px;
+    }
+}
+
+/*==================================================
+MOBILE — compact 2-column layout
+==================================================*/
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 18px 18px;
+        margin-top: 50px;
+    }
+
+    .footer::before {
+        width: 220px;
+        height: 220px;
+        top: -100px;
+        right: -80px;
+    }
+
+    .footer::after {
+        width: 160px;
+        height: 160px;
+        bottom: -80px;
+        left: -70px;
+    }
+
+    .row.gy-4 {
+        --bs-gutter-y: 1.5rem;
+    }
+
+    .footer-col-store {
+        text-align: center;
+    }
+
+    .footer-logo {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .footer-description {
+        font-size: 13px;
+        line-height: 1.7;
+        margin-bottom: 16px;
+    }
+
+    .trust-badges {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .trust-badges span {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+
+    .footer h5 {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .footer h5::after {
+        margin: 8px auto 0;
+    }
+
+    /* On mobile, headings + lists center within their half-width column */
+    .col-6.col-lg-2,
+    .col-6.col-lg-3 {
+        text-align: center;
+    }
+
+    .footer-links li {
+        margin-bottom: 8px;
+        font-size: 12.5px;
+        line-height: 1.5;
+    }
+
+    /* Social: centered horizontal icon row, hide text labels to save space */
+    .social-links {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .social-label {
+        display: none;
+    }
+
+    .social-links i {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+    .footer hr {
+        margin: 24px 0 14px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        font-size: 12px;
+        gap: 4px;
+    }
+}
+
+/*==================================================
+SMALL MOBILE
+==================================================*/
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 32px 14px 16px;
+    }
+
+    .footer-logo {
+        font-size: 20px;
+    }
+
+    .footer-description {
+        font-size: 12.5px;
+    }
+
+    .trust-badges span {
+        font-size: 10.5px;
+        padding: 5px 10px;
+    }
+
+    .footer h5 {
+        font-size: 14px;
+    }
+
+    .footer-links li {
+        font-size: 12px;
+    }
+
+    .social-links i {
+        width: 36px;
+        height: 36px;
+        font-size: 15px;
+    }
+
+    .footer-bottom {
+        font-size: 11px;
+    }
+}
+
+/*==================================================
+REDUCED MOTION
+==================================================*/
+
+@media (prefers-reduced-motion: reduce) {
+    .social-links a,
+    .social-links i,
+    .trust-badges span {
+        transition: none;
+    }
+}

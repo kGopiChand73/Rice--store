@@ -1,0 +1,83 @@
+.address-item{
+    display:flex;
+    gap:14px;
+    align-items:flex-start;
+    padding:16px;
+    border:1px solid var(--kr-line);
+    border-radius:var(--kr-radius-md);
+    background:var(--kr-surface-tint);
+    transition:border-color .15s ease, box-shadow .15s ease;
+}
+
+.address-item:hover{
+    border-color:var(--kr-gold-500);
+    box-shadow:var(--kr-shadow-sm);
+}
+
+.address-item--default{
+    border-color:var(--kr-green-500);
+    background:var(--kr-green-100);
+}
+
+.address-item-icon{
+    flex:0 0 auto;
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--kr-gold-200);
+    color:var(--kr-gold-700);
+}
+
+.address-item--default .address-item-icon{
+    background:var(--kr-green-700);
+    color:#fff;
+}
+
+.address-item-body{
+    flex:1 1 auto;
+    min-width:0;
+}
+
+.address-item-top{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:4px;
+}
+
+.address-type{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--kr-ink-faint);
+}
+
+.default-address{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:0.03em;
+    color:var(--kr-green-900);
+    background:#fff;
+    border:1px solid var(--kr-green-500);
+    padding:2px 9px;
+    border-radius:999px;
+}
+
+.address-name{
+    font-weight:600;
+    font-size:14.5px;
+    color:var(--kr-ink);
+    margin-bottom:2px;
+}
+
+.address-line,
+.address-city{
+    font-size:13px;
+    color:var(--kr-ink-soft);
+    margin-bottom:0;
+    line-height:1.5;
+}

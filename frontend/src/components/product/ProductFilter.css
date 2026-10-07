@@ -1,0 +1,57 @@
+.product-filter{
+
+    background:white;
+    
+    padding:25px;
+    
+    border-radius:15px;
+    
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    
+    }
+    
+    .product-filter ul{
+    
+    list-style:none;
+    
+    padding:0;
+    
+    }
+    
+    .product-filter li{
+    
+    margin-bottom:12px;
+    
+    }
+    
+    .product-filter button{
+    
+    width:100%;
+    
+    border:none;
+    
+    padding:10px;
+    
+    background:#f5f5f5;
+    
+    border-radius:8px;
+    
+    transition:.3s;
+    
+    }
+    
+    .product-filter button.active{
+    
+    background:#2E7D32;
+    
+    color:white;
+    
+    }
+    
+    .product-filter button:hover{
+    
+    background:#43A047;
+    
+    color:white;
+    
+    }

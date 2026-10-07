@@ -1,0 +1,452 @@
+/* ==========================================
+   HERO SECTION
+========================================== */
+
+.hero {
+    padding: 40px 0;
+    background: transparent;
+}
+
+/* ===========================
+   Card container — matches
+   .category-section .container
+=========================== */
+
+.hero .container {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #eefcf0 0%, #f5fbf0 50%, #fffbf0 100%);
+    border-radius: 28px;
+    padding: 60px 45px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5f3e6;
+    z-index: 2;
+}
+
+.hero .container::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background: radial-gradient(circle, rgba(46, 125, 50, 0.14) 0%, rgba(46, 125, 50, 0) 70%);
+    border-radius: 50%;
+    top: -200px;
+    right: -160px;
+    pointer-events: none;
+}
+
+.hero .container::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(255, 193, 7, 0.18) 0%, rgba(255, 193, 7, 0) 70%);
+    border-radius: 50%;
+    left: -110px;
+    bottom: -120px;
+    pointer-events: none;
+}
+
+.hero .container > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* ===========================
+   LEFT CONTENT
+=========================== */
+
+:root {
+    --hero-green: #2e7d32;
+    --hero-green-dark: #1b5e20;
+    --hero-text: #1f2937;
+    --hero-text-muted: #5b5b5b;
+    --hero-amber: #ffc107;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: #e8f5e9;
+    color: var(--hero-green);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    border-radius: 50px;
+    margin-bottom: 22px;
+    animation: fadeIn 0.6s ease both;
+}
+
+.hero h1 {
+    font-size: clamp(28px, 4vw + 12px, 60px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    color: var(--hero-text);
+    margin-bottom: 22px;
+    animation: fadeIn 0.6s ease 0.05s both;
+}
+
+.hero h1 span {
+    color: var(--hero-green);
+    position: relative;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.9;
+    color: var(--hero-text-muted);
+    max-width: 560px;
+    margin-bottom: 28px;
+    animation: fadeIn 0.6s ease 0.1s both;
+}
+
+.hero-trust {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 22px;
+    background: #fff8e1;
+    border: 1px solid #ffd54f;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #795548;
+    margin-bottom: 35px;
+    animation: fadeIn 0.6s ease 0.15s both;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 45px;
+    animation: fadeIn 0.6s ease 0.2s both;
+}
+
+.hero .btn {
+    padding: 15px 40px;
+    min-height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 17px;
+    font-weight: 700;
+    box-shadow: 0 10px 25px rgba(46, 125, 50, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero .btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(46, 125, 50, 0.32);
+}
+
+.hero .btn:active {
+    transform: translateY(-1px);
+}
+
+.hero .btn:focus-visible {
+    outline: 3px solid var(--hero-green);
+    outline-offset: 3px;
+}
+
+/* ===========================
+   STATS
+=========================== */
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+    animation: fadeIn 0.6s ease 0.25s both;
+}
+
+.hero-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stat h3 {
+    font-size: 34px;
+    font-weight: 800;
+    color: var(--hero-green);
+    margin: 0;
+    line-height: 1.1;
+}
+
+.hero-stat span {
+    font-size: 14px;
+    color: #666;
+    margin-top: 2px;
+}
+
+/* ===========================
+   TELUGU
+=========================== */
+
+.hero-telugu {
+    margin-top: 20px;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+    animation: fadeIn 0.6s ease 0.3s both;
+}
+
+.hero-telugu h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--hero-green);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.hero-telugu p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--hero-text-muted);
+}
+
+.hero-trust.telugu {
+    display: inline-flex;
+    margin-top: 18px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+/* ===========================
+   IMAGE
+=========================== */
+
+.hero-image {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    margin: 0 auto;
+    opacity: 1;
+    visibility: visible;
+
+    border-radius: 24px;
+    box-shadow:
+        0 25px 50px rgba(27, 94, 32, 0.22),
+        0 10px 20px rgba(0, 0, 0, 0.12);
+
+    transform-origin: center bottom;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation:
+        float 5s cubic-bezier(0.45, 0, 0.55, 1) infinite,
+        fadeInScale 0.8s ease both;
+}
+
+.hero-image:hover {
+    animation-play-state: paused;
+    transform: scale(1.03) translateY(-10px) rotate(0deg);
+    box-shadow:
+        0 32px 60px rgba(27, 94, 32, 0.28),
+        0 14px 26px rgba(0, 0, 0, 0.16);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(0.6deg);
+    }
+    50% {
+        transform: translateY(-18px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-10px) rotate(-0.6deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.94);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-image,
+    .hero-badge,
+    .hero h1,
+    .hero-description,
+    .hero-trust,
+    .hero-buttons,
+    .hero-stats,
+    .hero-telugu {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .hero-image:hover {
+        transform: none;
+    }
+}
+
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width: 991px) {
+    .hero .container {
+        padding: 45px 25px;
+    }
+
+    .hero-image {
+        max-width: 380px;
+        margin-bottom: 30px;
+    }
+
+    .hero-stats {
+        gap: 25px;
+    }
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px 0;
+    }
+
+    .hero .container {
+        padding: 30px 18px;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .hero .container::before {
+        width: 240px;
+        height: 240px;
+        top: -110px;
+        right: -110px;
+    }
+
+    .hero .container::after {
+        width: 170px;
+        height: 170px;
+        bottom: -80px;
+        left: -80px;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero .btn {
+        width: 100%;
+    }
+
+    .hero-image {
+        display: block !important;
+        max-width: 260px;
+        width: 100%;
+        margin: 0 auto 25px;
+        opacity: 1 !important;
+        visibility: visible !important;
+        animation: fadeIn 0.6s ease both;
+    }
+
+    .hero-stats {
+        justify-content: space-around;
+        margin-bottom: 25px;
+    }
+
+    .hero-stat {
+        align-items: center;
+    }
+
+    .hero-stat h3 {
+        font-size: 26px;
+    }
+
+    .hero-telugu {
+        padding-top: 22px;
+    }
+
+    .hero-telugu h2 {
+        font-size: 22px;
+    }
+
+    .hero-telugu p {
+        font-size: 15px;
+    }
+
+    .hero-trust.telugu {
+        text-align: center;
+    }
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media (max-width: 480px) {
+    .hero .container {
+        padding: 24px 14px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-trust {
+        font-size: 13px;
+        padding: 12px 18px;
+    }
+
+    .hero-image {
+        max-width: 210px;
+    }
+
+    .hero-stat h3 {
+        font-size: 22px;
+    }
+
+    .hero-stat span {
+        font-size: 12px;
+    }
+
+    .hero-telugu h2 {
+        font-size: 20px;
+    }
+
+    .hero-telugu p {
+        font-size: 14px;
+    }
+}

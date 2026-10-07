@@ -1,0 +1,66 @@
+.address-panel{
+    background:var(--kr-surface);
+    border-radius:var(--kr-radius-lg);
+    border:1px solid var(--kr-line);
+    box-shadow:var(--kr-shadow);
+    padding:28px 28px 8px;
+    height:100%;
+}
+
+.address-panel-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:18px;
+}
+
+.address-panel-header h4{
+    font-family:var(--kr-display);
+    font-weight:600;
+    font-size:1.2rem;
+    color:var(--kr-green-900);
+    margin:0;
+}
+
+.address-count{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:26px;
+    height:26px;
+    padding:0 8px;
+    border-radius:999px;
+    background:var(--kr-green-100);
+    color:var(--kr-green-700);
+    font-size:12px;
+    font-weight:700;
+}
+
+.address-panel-body{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    padding-bottom:20px;
+}
+
+.address-empty,
+.address-empty-state{
+    color:var(--kr-ink-soft);
+    font-size:14px;
+}
+
+.address-empty-state{
+    text-align:center;
+    padding:32px 12px;
+}
+
+.address-empty-icon{
+    display:block;
+    font-size:26px;
+    margin-bottom:8px;
+    opacity:.6;
+}
+
+@media (max-width:576px){
+    .address-panel{padding:22px 18px 8px;}
+}

@@ -1,0 +1,6 @@
+.product-thumb{
+    width:70px;
+    height:70px;
+    border-radius:12px;
+    object-fit:cover;
+}

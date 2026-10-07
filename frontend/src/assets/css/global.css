@@ -1,0 +1,30 @@
+body{
+    background:#F8FAF8;
+    color:#222;
+    overflow-x:hidden;
+}
+
+.section{
+    padding:80px 0;
+}
+
+.shadow-card{
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.btn-success{
+    background:#2E7D32;
+    border:none;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.btn-success:hover{
+    transform:translateY(-2px);
+}
+
+.form-control{
+    border-radius:12px;
+    padding:12px;
+}
